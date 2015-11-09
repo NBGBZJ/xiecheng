@@ -42,9 +42,12 @@ def query_xcinfo():
 def del_db_xcinfo(id):
     sql = " DELETE FROM fly_xc where xc_id ='%s'"%id
     print(sql)
-    ret = do_sql(sql)
-    log_set(name='sql',msg='del_DB,id=%s'%id)
-    return ret
+    try:
+        ret = do_sql(sql)
+        log_set(name='sql',msg='del_DB,id=%s'%id)
+        return ret
+    except Exception as e:
+        log_set(name='sql', msg='%s,deldb_1 is fail:%s'%(str(e.message),sql))
 
 def update_xcfly(YearMonthDate1,DepartPort, ArrivePort,Flight_Price,Flight_No,inVent,xc_id):
     all_uni = str(YearMonthDate1)+str(DepartPort)+str(ArrivePort)+str(Flight_No)
@@ -53,11 +56,11 @@ def update_xcfly(YearMonthDate1,DepartPort, ArrivePort,Flight_Price,Flight_No,in
     try:
         print(sql)
         ret = do_sql(sql)
-        log_set(name='sql', msg='update1 is %s'%(sql))
+        log_set(name='sql', msg='update_1 is %s'%(sql))
         return ret
     except Exception as e:
         print('b')
-        log_set(name='sql', msg='%s,update1 is fail:%s'%(str(e),sql))
+        log_set(name='sql', msg='%s,update_1 is fail:%s'%(str(e.message),sql))
 
 def save_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,Flight_Price,inVent,xc_id):
     all_uni = str(YearMonthDate1)+str(DepartPort)+str(ArrivePort)+str(Flight_No)
@@ -69,7 +72,7 @@ def save_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,Flight_Price,i
         log_set(name='sql', msg='[save1_fly_xc],%s'%all_uni)
         return ret
     except Exception as e:
-        log_set(name='sql', msg='save1%s,%s,%s,%s,%s,%s,%s'(str(e),str(YearMonthDate1),str(DepartPort),str(ArrivePort),str(Flight_No),str(Flight_Price),str(inVent)))
+        log_set(name='sql', msg='save1%s,%s,%s,%s,%s,%s,%s'(str(e.message),str(YearMonthDate1),str(DepartPort),str(ArrivePort),str(Flight_No),str(Flight_Price),str(inVent)))
         update_xcfly(YearMonthDate1,DepartPort,ArrivePort,Flight_Price,Flight_No,inVent,xc_id)
 
 
@@ -120,10 +123,12 @@ def get2_pri_from_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No):
 def del2_xcinfo(id):
     sql = " DELETE FROM fly_xc2 where xc_id ='%s'"%id
     print(sql)
-    ret = do_sql(sql)
-    log_set(name='sql',msg='del_DB2,id=%s'%id)
-    return ret
-
+    try:
+        ret = do_sql(sql)
+        log_set(name='sql',msg='del_DB2,id=%s'%id)
+        return ret
+    except Exception as e:
+        log_set(name='sql', msg='%s,deldb_1 is fail:%s'%(str(e.message),sql))
 def get_id_from_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No):
     sql = " select xc_id from fly_xc WHERE YearMonthDate1='%s' AND DepartPort='%s' AND ArrivePort='%s' AND Flight_No='%s'"%(YearMonthDate1, DepartPort,ArrivePort, Flight_No)
     print(sql)
