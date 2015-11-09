@@ -1,5 +1,3 @@
-
-
 from datetime import datetime, timedelta
 import os
 
@@ -28,4 +26,4 @@ def log_set(msg, name ='main'):
 
 #log_set(name ='a',msg ='hia')
 # log_set(msg ='hia2')
-log_set(name='fix', msg=' fix is ok!,id =%s')
+#log_set(name='fix', msg=' fix is ok!,id =%s')

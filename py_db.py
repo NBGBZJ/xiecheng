@@ -83,7 +83,7 @@ def update2_xcfly(YearMonthDate1,DepartPort,ArrivePort, Flight_No,price,xc_id,iV
         return ret
     except Exception as e:
 
-        log_set(name='sql', msg= 'update2 is fail,%s'%(sql))
+        log_set(name='sql', msg= '%s,update2 is fail,%s'%(str(e.message),str(sql)))
 
 
 def save2_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,inVent,xc_id,price):
@@ -96,7 +96,7 @@ def save2_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,inVent,xc_id,
         return ret
     except Exception as e:
         time.sleep(2)
-        log_set(name='sql', msg='save2_fial_to update:%s'%sql)
+        log_set(name='sql', msg='%s,save2_fial_to update:%s'%(str(e.message),sql))
         update2_xcfly(YearMonthDate1,DepartPort,ArrivePort, Flight_No,price,xc_id,inVent)
 def get2_id_from_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No):
     sql = " select xc_id from fly_xc2 WHERE YearMonthDate1='%s' AND DepartPort='%s' AND ArrivePort='%s' AND Flight_No='%s'"%(YearMonthDate1, DepartPort,ArrivePort, Flight_No)

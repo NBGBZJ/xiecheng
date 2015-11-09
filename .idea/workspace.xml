@@ -51,9 +51,21 @@
       <file leaf-file-name="class_xiecheng_send.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class_xiecheng_send.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4642856">
-              <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
+            <state vertical-scroll-proportion="-12.692307">
+              <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_log.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/my_log.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.461538">
+              <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,8 +73,8 @@
       <file leaf-file-name="class_xiecheng_lunxun.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class_xiecheng_lunxun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.535714">
-              <caret line="120" column="64" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
+            <state vertical-scroll-proportion="-7.6153846">
+              <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
               </folding>
@@ -73,18 +85,18 @@
       <file leaf-file-name="class_xiecheng.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class_xiecheng.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.357142">
+            <state vertical-scroll-proportion="-10.153846">
               <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="time5.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="time5.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/time5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.30726257">
-              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            <state vertical-scroll-proportion="-1.6923077">
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -93,7 +105,7 @@
       <file leaf-file-name="class_xiechang_fix.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class_xiechang_fix.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.9642856">
+            <state vertical-scroll-proportion="0.0">
               <caret line="93" column="57" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
               <folding />
             </state>
@@ -103,7 +115,7 @@
       <file leaf-file-name="class_xiecheng_delete.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class_xiecheng_delete.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.8214285">
+            <state vertical-scroll-proportion="0.0">
               <caret line="19" column="100" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="100" />
               <folding>
                 <element signature="e#23#38#0" expanded="true" />
@@ -115,7 +127,7 @@
       <file leaf-file-name="fb_xc.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fb_xc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.928572">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
               <folding />
             </state>
@@ -125,29 +137,29 @@
       <file leaf-file-name="class_xiechang_fix2.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/class_xiechang_fix2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.785714">
+            <state vertical-scroll-proportion="0.0">
               <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="py_db.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="py_db.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.41367522">
+              <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
               <folding>
-                <marker date="1446996015341" expanded="true" signature="832:852" placeholder="select * fro..fly_xc..." />
-                <marker date="1446996015341" expanded="true" signature="930:966" placeholder="DELETE FROM ..." />
-                <marker date="1446996015341" expanded="true" signature="1257:1348" placeholder="update fly_x..." />
-                <marker date="1446996015341" expanded="true" signature="1825:1974" placeholder="insert into ..." />
-                <marker date="1446996015341" expanded="true" signature="2672:2747" placeholder="update fly_x..." />
-                <marker date="1446996015341" expanded="true" signature="3295:3438" placeholder="insert into ..." />
-                <marker date="1446996015341" expanded="true" signature="3924:4034" placeholder="select xc_id..fly_xc2..." />
-                <marker date="1446996015341" expanded="true" signature="4277:4387" placeholder="select price..fly_xc2..." />
-                <marker date="1446996015341" expanded="true" signature="4579:4616" placeholder="DELETE FROM ..." />
-                <marker date="1446996015341" expanded="true" signature="4805:4914" placeholder="select xc_id..fly_xc..." />
+                <marker date="1447063387600" expanded="true" signature="832:852" placeholder="select * fro..fly_xc..." />
+                <marker date="1447063387600" expanded="true" signature="930:966" placeholder="DELETE FROM ..." />
+                <marker date="1447063387600" expanded="true" signature="1257:1348" placeholder="update fly_x..." />
+                <marker date="1447063387600" expanded="true" signature="1825:1974" placeholder="insert into ..." />
+                <marker date="1447063387600" expanded="true" signature="2672:2747" placeholder="update fly_x..." />
+                <marker date="1447063387600" expanded="true" signature="3318:3461" placeholder="insert into ..." />
+                <marker date="1447063387600" expanded="true" signature="3967:4077" placeholder="select xc_id..fly_xc2..." />
+                <marker date="1447063387600" expanded="true" signature="4320:4430" placeholder="select price..fly_xc2..." />
+                <marker date="1447063387600" expanded="true" signature="4622:4659" placeholder="DELETE FROM ..." />
+                <marker date="1447063387600" expanded="true" signature="4848:4957" placeholder="select xc_id..fly_xc..." />
               </folding>
             </state>
           </provider>
@@ -185,7 +197,6 @@
         <option value="$PROJECT_DIR$/sql.py" />
         <option value="$PROJECT_DIR$/tongbu.py" />
         <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/my_log.py" />
         <option value="$PROJECT_DIR$/class_xiecheng_send.py" />
         <option value="$PROJECT_DIR$/class_xiechang_fix.py" />
         <option value="$PROJECT_DIR$/class_xiechang_fix2.py" />
@@ -194,9 +205,10 @@
         <option value="$PROJECT_DIR$/class_xiecheng_delete.py" />
         <option value="$PROJECT_DIR$/class_xiecheng.py" />
         <option value="$PROJECT_DIR$/class_xiecheng_lunxun.py" />
-        <option value="$PROJECT_DIR$/py_db.py" />
         <option value="$PROJECT_DIR$/hx.txt" />
         <option value="$PROJECT_DIR$/time5.py" />
+        <option value="$PROJECT_DIR$/my_log.py" />
+        <option value="$PROJECT_DIR$/py_db.py" />
       </list>
     </option>
   </component>
@@ -208,6 +220,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1366" />
     <option name="height" value="728" />
   </component>
@@ -234,7 +248,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -255,11 +269,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/7lk/stock" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
@@ -624,7 +638,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23572475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -634,18 +648,18 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3526646" sideWeight="0.4795022" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3526646" sideWeight="0.4795022" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275862" sideWeight="0.49707174" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -699,9 +713,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="175" column="82" selection-start-line="175" selection-start-column="82" selection-end-line="175" selection-end-column="82" />
-          <folding>
-            <element signature="e#23#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -709,9 +721,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="87" column="21" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-          <folding>
-            <element signature="e#24#39#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -727,9 +737,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="12" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#30#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -745,9 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="80" column="12" selection-start-line="80" selection-start-column="12" selection-end-line="80" selection-end-column="12" />
-          <folding>
-            <element signature="e#24#39#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,9 +838,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
-          <folding>
-            <element signature="e#23#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -864,9 +867,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#23#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -874,9 +875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
-          <folding>
-            <element signature="e#23#38#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -940,7 +939,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="17" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -951,19 +949,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_log.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/class_xiecheng_back.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -971,7 +960,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21428572">
           <caret line="180" column="12" selection-start-line="180" selection-start-column="12" selection-end-line="180" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -979,7 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.785714">
           <caret line="122" column="17" selection-start-line="122" selection-start-column="17" selection-end-line="122" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -995,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.5714285">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1003,13 +988,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/class_xiechang_fix.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9642856">
+        <state vertical-scroll-proportion="0.0">
           <caret line="93" column="57" selection-start-line="93" selection-start-column="57" selection-end-line="93" selection-end-column="57" />
           <folding />
         </state>
@@ -1017,7 +1001,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class_xiechang_fix2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.785714">
+        <state vertical-scroll-proportion="0.0">
           <caret line="83" column="39" selection-start-line="83" selection-start-column="39" selection-end-line="83" selection-end-column="39" />
           <folding />
         </state>
@@ -1025,7 +1009,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/class_xiecheng_delete.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8214285">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="100" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="100" />
           <folding>
             <element signature="e#23#38#0" expanded="true" />
@@ -1033,36 +1017,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/class_xiecheng_lunxun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.535714">
-          <caret line="120" column="64" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
-          <folding>
-            <element signature="e#23#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class_xiecheng_send.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.4642856">
-          <caret line="140" column="9" selection-start-line="140" selection-start-column="9" selection-end-line="140" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fb_xc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.928572">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/class_xiecheng.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.357142">
-          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -1074,34 +1032,69 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44692737">
           <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/py_db.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <marker date="1446996015341" expanded="true" signature="832:852" placeholder="select * fro..fly_xc..." />
-            <marker date="1446996015341" expanded="true" signature="930:966" placeholder="DELETE FROM ..." />
-            <marker date="1446996015341" expanded="true" signature="1257:1348" placeholder="update fly_x..." />
-            <marker date="1446996015341" expanded="true" signature="1825:1974" placeholder="insert into ..." />
-            <marker date="1446996015341" expanded="true" signature="2672:2747" placeholder="update fly_x..." />
-            <marker date="1446996015341" expanded="true" signature="3295:3438" placeholder="insert into ..." />
-            <marker date="1446996015341" expanded="true" signature="3924:4034" placeholder="select xc_id..fly_xc2..." />
-            <marker date="1446996015341" expanded="true" signature="4277:4387" placeholder="select price..fly_xc2..." />
-            <marker date="1446996015341" expanded="true" signature="4579:4616" placeholder="DELETE FROM ..." />
-            <marker date="1446996015341" expanded="true" signature="4805:4914" placeholder="select xc_id..fly_xc..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/time5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30726257">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state vertical-scroll-proportion="-1.6923077">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class_xiecheng_send.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.692307">
+          <caret line="137" column="45" selection-start-line="137" selection-start-column="45" selection-end-line="137" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class_xiecheng.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.153846">
+          <caret line="128" column="40" selection-start-line="128" selection-start-column="40" selection-end-line="128" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/class_xiecheng_lunxun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6153846">
+          <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+          <folding>
+            <element signature="e#23#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_log.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.461538">
+          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/py_db.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41367522">
+          <caret line="87" column="0" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding>
+            <marker date="1447063387600" expanded="true" signature="832:852" placeholder="select * fro..fly_xc..." />
+            <marker date="1447063387600" expanded="true" signature="930:966" placeholder="DELETE FROM ..." />
+            <marker date="1447063387600" expanded="true" signature="1257:1348" placeholder="update fly_x..." />
+            <marker date="1447063387600" expanded="true" signature="1825:1974" placeholder="insert into ..." />
+            <marker date="1447063387600" expanded="true" signature="2672:2747" placeholder="update fly_x..." />
+            <marker date="1447063387600" expanded="true" signature="3318:3461" placeholder="insert into ..." />
+            <marker date="1447063387600" expanded="true" signature="3967:4077" placeholder="select xc_id..fly_xc2..." />
+            <marker date="1447063387600" expanded="true" signature="4320:4430" placeholder="select price..fly_xc2..." />
+            <marker date="1447063387600" expanded="true" signature="4622:4659" placeholder="DELETE FROM ..." />
+            <marker date="1447063387600" expanded="true" signature="4848:4957" placeholder="select xc_id..fly_xc..." />
+          </folding>
         </state>
       </provider>
     </entry>
