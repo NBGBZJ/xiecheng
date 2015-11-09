@@ -167,7 +167,7 @@ def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
             for info in info_list:
                one_info=dict()
                print(YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1])
-               log_set(name='lianhe', msg='[lianhe]'+YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1])
+               log_set(name='lianhe', msg='lianhe:'+YearMonthDate+',fight_no：'+ info+':'+'invent：'+ (info_list[info][0]) + ':feiba_price:'+info_list[info][1])
                # print('#############去做对比工作和投放#############')
                one_info[info] = info_list[info]
                ## log_set(name='duibi', msg='[lianhe]'+YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1]+deptCd+arrCd)
@@ -178,7 +178,7 @@ def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
 
         if not len(spy_data):
             print('已经没有欢乐抢机票了')
-            log_set(name='lianhe', msg='[lianhe]已经没有欢乐抢机票了')
+            log_set(name='lianhe', msg='[lianhe]it have not invent')
             #return {'code':1}
             #TO 下次再爬，单独爬某一天方法##############
 
