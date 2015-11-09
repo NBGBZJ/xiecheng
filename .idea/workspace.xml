@@ -134,32 +134,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="py_db.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="py_db.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/py_db.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2037036">
-              <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.47396767">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding>
-                <marker date="1447063820440" expanded="true" signature="832:852" placeholder="select * fro..fly_xc..." />
-                <marker date="1447063820440" expanded="true" signature="930:966" placeholder="DELETE FROM ..." />
-                <marker date="1447063820440" expanded="true" signature="1383:1474" placeholder="update fly_x..." />
-                <marker date="1447063820440" expanded="true" signature="1961:2110" placeholder="insert into ..." />
-                <marker date="1447063820440" expanded="true" signature="2816:2891" placeholder="update fly_x..." />
-                <marker date="1447063820440" expanded="true" signature="3462:3605" placeholder="insert into ..." />
-                <marker date="1447063820440" expanded="true" signature="4111:4221" placeholder="select xc_id..fly_xc2..." />
-                <marker date="1447063820440" expanded="true" signature="4464:4574" placeholder="select price..fly_xc2..." />
-                <marker date="1447063820440" expanded="true" signature="4766:4803" placeholder="DELETE FROM ..." />
-                <marker date="1447063820440" expanded="true" signature="5117:5226" placeholder="select xc_id..fly_xc..." />
+                <marker date="1447074993163" expanded="true" signature="838:858" placeholder="select * fro..fly_xc..." />
+                <marker date="1447074993163" expanded="true" signature="936:972" placeholder="DELETE FROM ..." />
+                <marker date="1447074993163" expanded="true" signature="1389:1480" placeholder="update fly_x..." />
+                <marker date="1447074993163" expanded="true" signature="1967:2116" placeholder="insert into ..." />
+                <marker date="1447074993163" expanded="true" signature="2822:2897" placeholder="update fly_x..." />
+                <marker date="1447074993163" expanded="true" signature="3468:3611" placeholder="insert into ..." />
+                <marker date="1447074993163" expanded="true" signature="4117:4227" placeholder="select xc_id..fly_xc2..." />
+                <marker date="1447074993163" expanded="true" signature="4470:4580" placeholder="select price..fly_xc2..." />
+                <marker date="1447074993163" expanded="true" signature="4772:4809" placeholder="DELETE FROM ..." />
+                <marker date="1447074993163" expanded="true" signature="5123:5232" placeholder="select xc_id..fly_xc..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lianhe.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="lianhe.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lianhe.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41113105">
-              <caret line="169" column="125" selection-start-line="169" selection-start-column="125" selection-end-line="169" selection-end-column="125" />
+            <state vertical-scroll-proportion="-2.2037036">
+              <caret line="164" column="78" selection-start-line="164" selection-start-column="78" selection-end-line="164" selection-end-column="78" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
@@ -209,8 +209,8 @@
         <option value="$PROJECT_DIR$/hx.txt" />
         <option value="$PROJECT_DIR$/time5.py" />
         <option value="$PROJECT_DIR$/my_log.py" />
-        <option value="$PROJECT_DIR$/py_db.py" />
         <option value="$PROJECT_DIR$/lianhe.py" />
+        <option value="$PROJECT_DIR$/py_db.py" />
       </list>
     </option>
   </component>
@@ -222,7 +222,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="523" />
     <option name="y" value="-8" />
     <option name="width" value="1366" />
     <option name="height" value="728" />
@@ -640,7 +640,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1366" height="728" extended-state="0" />
+    <frame x="523" y="-8" width="1366" height="728" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23572475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1077,31 +1077,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/py_db.py">
+    <entry file="file://$PROJECT_DIR$/lianhe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.2037036">
-          <caret line="57" column="25" selection-start-line="57" selection-start-column="25" selection-end-line="57" selection-end-column="25" />
+          <caret line="164" column="78" selection-start-line="164" selection-start-column="78" selection-end-line="164" selection-end-column="78" />
           <folding>
-            <marker date="1447063820440" expanded="true" signature="832:852" placeholder="select * fro..fly_xc..." />
-            <marker date="1447063820440" expanded="true" signature="930:966" placeholder="DELETE FROM ..." />
-            <marker date="1447063820440" expanded="true" signature="1383:1474" placeholder="update fly_x..." />
-            <marker date="1447063820440" expanded="true" signature="1961:2110" placeholder="insert into ..." />
-            <marker date="1447063820440" expanded="true" signature="2816:2891" placeholder="update fly_x..." />
-            <marker date="1447063820440" expanded="true" signature="3462:3605" placeholder="insert into ..." />
-            <marker date="1447063820440" expanded="true" signature="4111:4221" placeholder="select xc_id..fly_xc2..." />
-            <marker date="1447063820440" expanded="true" signature="4464:4574" placeholder="select price..fly_xc2..." />
-            <marker date="1447063820440" expanded="true" signature="4766:4803" placeholder="DELETE FROM ..." />
-            <marker date="1447063820440" expanded="true" signature="5117:5226" placeholder="select xc_id..fly_xc..." />
+            <element signature="e#24#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lianhe.py">
+    <entry file="file://$PROJECT_DIR$/py_db.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41113105">
-          <caret line="169" column="125" selection-start-line="169" selection-start-column="125" selection-end-line="169" selection-end-column="125" />
+        <state vertical-scroll-proportion="0.47396767">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
           <folding>
-            <element signature="e#24#39#0" expanded="true" />
+            <marker date="1447074993163" expanded="true" signature="838:858" placeholder="select * fro..fly_xc..." />
+            <marker date="1447074993163" expanded="true" signature="936:972" placeholder="DELETE FROM ..." />
+            <marker date="1447074993163" expanded="true" signature="1389:1480" placeholder="update fly_x..." />
+            <marker date="1447074993163" expanded="true" signature="1967:2116" placeholder="insert into ..." />
+            <marker date="1447074993163" expanded="true" signature="2822:2897" placeholder="update fly_x..." />
+            <marker date="1447074993163" expanded="true" signature="3468:3611" placeholder="insert into ..." />
+            <marker date="1447074993163" expanded="true" signature="4117:4227" placeholder="select xc_id..fly_xc2..." />
+            <marker date="1447074993163" expanded="true" signature="4470:4580" placeholder="select price..fly_xc2..." />
+            <marker date="1447074993163" expanded="true" signature="4772:4809" placeholder="DELETE FROM ..." />
+            <marker date="1447074993163" expanded="true" signature="5123:5232" placeholder="select xc_id..fly_xc..." />
           </folding>
         </state>
       </provider>

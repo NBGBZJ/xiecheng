@@ -8,10 +8,10 @@ from my_log import log_set
 def do_sql(sql):
 
     conn= MySQLdb.connect(
-            host='127.0.0.1',
+            host='114.215.123.231',
             port = 3306,
             user='root',
-            passwd='fuhan',
+            passwd='root',
             db = 'xiecheng',
             )
     cur = conn.cursor()
@@ -128,7 +128,7 @@ def del2_xcinfo(id):
         log_set(name='sql',msg='del_DB2,id=%s'%id)
         return ret
     except Exception as e:
-        log_set(name='sql', msg='%s,deldb_1 is fail:%s'%(str(e.message),sql))
+        log_set(name='sql', msg='%s,deldb_2 is fail:%s'%(str(e.message),sql))
 def get_id_from_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No):
     sql = " select xc_id from fly_xc WHERE YearMonthDate1='%s' AND DepartPort='%s' AND ArrivePort='%s' AND Flight_No='%s'"%(YearMonthDate1, DepartPort,ArrivePort, Flight_No)
     print(sql)
@@ -137,3 +137,14 @@ def get_id_from_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No):
         return ret[0][0]
     except:
         return None
+
+
+if __name__=='__main__':
+    YearMonthDate1='1'
+    DepartPort='2'
+    ArrivePort='3'
+    Flight_No='4'
+    inVent='5'
+    xc_id='6'
+    price='7'
+    save2_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,inVent,xc_id,price)
