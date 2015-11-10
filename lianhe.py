@@ -20,23 +20,7 @@ from IP_LIST import IP_list
 class spider:
     def __init__(self, tripType = 'OW', adtCount=1, chdCount=0, infCount=0, currency='CNY',sortType='a',
                  deptCd='', arrCd= '', deptDt='', deptCityCode = '',arrCityCode='',sortExec='a', page=0):
-        """
-        tripType：RT（往返） or OW（单程）
-        adtCount：成人数
-        chdCount：儿童数
-        infCount：婴儿数
-        currency： CNY 人民币
-        sortType：a 排序方式
-        segmentList:航程信息List
-        deptCd:出发城市 （三字码）
-        arrCd：到达城市
-        deptDt：2015-11-05 出发日期
-        deptCityCode：出发城市编码 BJS
-        arrCityCode:到达城市编码CSX
-        sortExec： 排序执行 a
-        page：起始行 0
 
-        """
         self.deptCd = deptCd
         self.arrCd = arrCd
         self.deptDt = deptDt
@@ -74,7 +58,7 @@ class spider:
         ############# proxies##########
         #prox_list = [{'http': 'http://test:hktest@103.27.125.250:6666'}]
         proxies = random.choice(IP_list)
-        print(proxies)
+       # print(proxies)
 
         ###################
 
@@ -84,10 +68,11 @@ class spider:
             # print(self.data)
             # print(url)
             # print(self.headers)
+            time.sleep(3)
             r = requests.post(url=url, data=self.data, headers=self.headers, proxies=proxies, timeout=10)
-            #time.sleep(5)
+            time.sleep(2)
             cont = r.content
-            #print(cont)
+        #    print(cont)
 
             if len(cont) > 2500:
                 #print('yes')
@@ -125,19 +110,19 @@ def deal_data(json_date):
                     for t in range(0,len(allFlight[i]['fareInfoView'])):
 
                        the_hlq_str = (allFlight[i]['fareInfoView'][t]['fareBasisCode']).encode('utf-8')
-                       print('hlq_str is :',the_hlq_str )
-                       print(type(the_hlq_str))
+         #              print('hlq_str is :',the_hlq_str )
+          #             print(type(the_hlq_str))
                        if the_hlq_str[0] in hlq_str:
                             hly = (allFlight[i]['fareInfoView'][t]['fare']['fdPrice'])
                             if float(hly) >8:
-                                info[hangban] = (yupiao, hly)
+           #                     info[hangban] = (yupiao, hly)
                                 print('info',info)
                                 #info_list.append(info)
                             else:
-                                print('8元抢票')
-                                # log_set(name='lianhe', msg='[lianhe]8元抢票')
-        print('info',info)
-        return info
+             #                   print('8元抢票')
+            #                    # log_set(name='lianhe', msg='[lianhe]8元抢票')
+       # print('info',info)
+         return info
     except:
 
          return info
@@ -166,7 +151,7 @@ def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
 
             for info in info_list:
                one_info=dict()
-               print(YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1])
+             #  print(YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1])
                log_set(name='lianhe', msg='lianhe:'+YearMonthDate+',fight_no：'+ info+':'+'invent：'+ (info_list[info][0]) + ':feiba_price:'+info_list[info][1])
                # print('#############去做对比工作和投放#############')
                one_info[info] = info_list[info]

@@ -82,7 +82,7 @@ class DoXC:
             #log_set(name='class_xiecheng', msg ='[xiecheng]携程找到航班:%s,%s'%(info_list,self.yearDate))
             return info_list
         except:
-            print('can not online')
+            #print('can not online')
 
 
     def compare(self,feiba_info,day,deptCd,arrCd):
@@ -92,14 +92,14 @@ class DoXC:
 		"""
         push_info=''
         info_list = self.get_data()
-        print('xc_info',info_list)
-        print('feba_info',feiba_info)
+        #print('xc_info',info_list)
+        #print('feba_info',feiba_info)
         if info_list:
            for xc in info_list:
                fligh_name_feiba = (list(feiba_info)[0].encode('utf-8')).lower()
                xc_flight_no = (xc[2]).encode('utf-8').lower()
 
-               print(xc_flight_no,fligh_name_feiba)
+               #print(xc_flight_no,fligh_name_feiba)
                if xc_flight_no == fligh_name_feiba:    # flight
                    # print('有对应的航班:%s'%(xc[1]).upper())
                    log_set(name='class_xiecheng', msg ='[xiecheng]有对应的航班:%s'%(xc[1]).upper())
@@ -111,33 +111,33 @@ class DoXC:
                    xc_id = get2_id_from_info(self.yearDate, self.DepartPort,self.ArrivePort,fligh_name_feiba[2:])
 
                    #if 778.0 - float(feiba_price) >6:
-                   print('----------',float(xc[1]),float(feiba_price))
+                   #print('----------',float(xc[1]),float(feiba_price))
                    if float(xc[1]) - float(feiba_price) >6:     #推送条件
 
 
                        if self.tag in (0,'0'):  # new come
                            # save_xc_info(self.yearDate, self.DepartPort,self.ArrivePort,xc[2], str(float(feiba_price)),inVent,xc_id=xc[0])
                            Flight_No=(xc[2][2:]).encode('utf-8')
-                           print('old',xc_id)
+                           #print('old',xc_id)
                            if not xc_id:   # never push
                                XC_send(YearMonthDate1=day, DepartPort=deptCd,ArrivePort=arrCd, Flight_No=Flight_No,Flight_Price=float(xc[1]),feiba_inVent=inVent,feiba_price=feiba_price)
                                #save_xc_info(YearMonthDate1=day, DepartPort=deptCd,ArrivePort=arrCd, Flight_No=xc[1],Flight_Price=float(xc[0]),inVent=int(feiba_info[(xc[1]).upper()][0]))
                                push_info = 'yearDate:%s,DepartPort:%s,ArrivePort%s##%s:%s will push !!!!!!'%(self.yearDate,self.DepartPort,self.ArrivePort,xc[0], xc[1])
                                log_set(name='class_xiecheng',msg=push_info)
                            else:
-                               print('update2')
+                               #print('update2')
                                update_xcfly(day,deptCd,arrCd,feiba_price,Flight_No,inVent,xc_id,)
 
 
                    else:
-                       print('携程数据中没有推送符合条件的航班信息,need delete zhe push order')
+                       #print('携程数据中没有推送符合条件的航班信息,need delete zhe push order')
                        log_set(name='class_xiecheng', msg = '[xiecheng]携程数据中没有推送符合条件的航班信息need delete zhe push order,%s,%s,xiecheng:%s,feiba:%s'%(xc[2],self.yearDate,xc[1],feiba_price))
 
 
                else:
-                    print('携程没有相应的航班')
+                    #print('携程没有相应的航班')
         else:
-            print('can not get data form xiecheng')
+            #print('can not get data form xiecheng')
             log_set(name='class_xiecheng',msg='can not ge date from xiecheng')
         return push_info
 
@@ -156,5 +156,5 @@ if __name__ == '__main__':
         ArrivePort="NAY"
         day ='2015-11-10'
         tag =1
-        print(day, DepartPort, ArrivePort,feiba_info,tag)
+      #  print(day, DepartPort, ArrivePort,feiba_info,tag)
         home(day, DepartPort, ArrivePort,feiba_info,tag)

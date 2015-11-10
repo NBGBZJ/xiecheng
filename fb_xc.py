@@ -35,11 +35,12 @@ def lunxun():
     xc_list = query_xcinfo()
     print('lunxun'+str(xc_list))
     t = len(xc_list)
-    time.sleep(4)
+    time.sleep(2)
     if t :
         xc_list2 = copy.deepcopy(xc_list)
         for i in xc_list2:
             t -= 1
+            time.sleep(1)
             #(('2015-11-09', 'DSN', 'CSX', 'kn2809', '140.0', '3', '133908916025', '2015-11-09DSNCSXkn2809'),)
             #{u'KN5911': (u'A', u'868.0')}
             fb_info = dict()
