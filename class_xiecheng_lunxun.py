@@ -80,7 +80,7 @@ class DoXC:
             #log_set(name='class_xiecheng', msg ='[xiecheng]携程找到航班:%s,%s'%(info_list,self.yearDate))
             return info_list
         except:
-            #print('can not online')
+            print('can not online')
 
 def compare(self,feiba_info,day,deptCd,arrCd):
         """
@@ -137,7 +137,7 @@ def compare(self,feiba_info,day,deptCd,arrCd):
                        del_work(xc_id)
 
                else:
-                    #print('携程没有相应的航班')
+                    print('��程没有相应的航班')
         else:
             #print('can not get data form xiecheng')
             log_set(name='lunxun_xiecheng',msg='can not ge date from xiecheng')

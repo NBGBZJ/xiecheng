@@ -8,7 +8,7 @@ from my_log import log_set
 def do_sql(sql):
 
     conn= MySQLdb.connect(
-            host='114.215.123.231',
+            host='127.0.0.1',
             port = 3306,
             user='root',
             passwd='root',

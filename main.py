@@ -10,7 +10,7 @@ def work():
         cont = f.readlines()
 
 
-    for i in range(len(cont)):
+    for i in range(0,9):
         print(i)
         hangxian = cont[i].replace('\r\n', '')
         hangxian = [x for x in hangxian.split("'") if x.isalpha()]

@@ -65,30 +65,31 @@ class spider:
         try:
             # log_set(name='lianhe',msg='#################################################')
             log_set(name='class_xiecheng',msg='验证网站'+str(self.url_page))
-            # print(self.data)
-            # print(url)
+            print(self.url_page)
+            #print(url)
             # print(self.headers)
-            time.sleep(3)
-            r = requests.post(url=url, data=self.data, headers=self.headers, proxies=proxies, timeout=10)
-            time.sleep(2)
+            print(proxies)
+            time.sleep(5)
+            r = requests.post(url=url, data=self.data, headers=self.headers,proxies=proxies, timeout=10)
+            
             cont = r.content
-        #    print(cont)
+            print(cont)
 
             if len(cont) > 2500:
-                #print('yes')
+                print('yes')
                 return cont
             else:
-                # print('sessionId获取失败，参数错误，you send error parmars')
+                print('sessionId� fail')
                 # log_set(name='lianhe', msg='[lianhe]sessionId获取失败，参数错误，%s,%s,%s'%(self.url_page, self.deptDt,proxies))
                 return ''
 
         except Exception as e:
-            # print('网络请求问题')
-            # log_set(name='lianhe', msg='[lianhe]网络请求问题,%s,%s,%s'%(self.url_page, self.deptDt,proxies))
-            return ''
+             print('网络请求问题')
+             log_set(name='lianhe', msg='lianhe]i,cant online:%s,%s,%s'%(self.url_page, self.deptDt,proxies))
+             return ''
 
 def deal_data(json_date):
-    #info_list = list()
+    info_list = list()
     info =dict()
     #print(json_date)
     try:
@@ -96,6 +97,7 @@ def deal_data(json_date):
         # print(json_date)
         allFlight = json_date['airResultDto']['productUnits']
         for i in range(0, len(allFlight)):
+                print(i)
                 hlq_str = 'SVTZU'
                 if allFlight[i]['productInfo']['productCode'] == 'HLY':
                     #print('HLYhlYHLy',allFlight[i]['productInfo']['productCode'])
@@ -115,17 +117,18 @@ def deal_data(json_date):
                        if the_hlq_str[0] in hlq_str:
                             hly = (allFlight[i]['fareInfoView'][t]['fare']['fdPrice'])
                             if float(hly) >8:
-           #                     info[hangban] = (yupiao, hly)
-                                print('info',info)
-                                #info_list.append(info)
-                            else:
+                                info[hangban] = (yupiao, hly)
+                                print('OKOOOKOKinfo',info)
+                                info_list.append(info)
+
+
+
              #                   print('8元抢票')
             #                    # log_set(name='lianhe', msg='[lianhe]8元抢票')
-       # print('info',info)
-         return info
+        print('info_list',info_list)
+        return info_list
     except:
-
-         return info
+        return info_list
 
 def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
     #q = Queue(connection=Redis())
@@ -146,19 +149,19 @@ def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
         if len(spy_data)>2000:
             """有取到有效信息"""
             info_list = deal_data(spy_data)
-            print('all hyl is'+str(info_list))
+            print('all hyl is',(info_list))
             ## log_set(name='lianhe', msg='[lianhe]all hyl is'+str(info_list))
 
             for info in info_list:
-               one_info=dict()
+               #one_info=dict()
              #  print(YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1])
-               log_set(name='lianhe', msg='lianhe:'+YearMonthDate+',fight_no：'+ info+':'+'invent：'+ (info_list[info][0]) + ':feiba_price:'+info_list[info][1])
-               # print('#############去做对比工作和投放#############')
-               one_info[info] = info_list[info]
-               ## log_set(name='duibi', msg='[lianhe]'+YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1]+deptCd+arrCd)
-               #print('YYYYYYYYYYYYYYY')
+              # log_set(name='lianhe', msg='lianhe:'+YearMonthDate+',fight_no：'+ info+':'+'invent：'+ (info_list[info][0]) + ':feiba_price:'+info_list[info][1])
+               print('#############去做对比工作和投放#############')
+               #one_info[info] = info_list[info]
+               #log_set(name='duibi', msg='[lianhe]'+YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1]+deptCd+arrCd)
+               print('YYYYYYYYYYYYYYY')
                #print(one_info)
-               p = multiprocessing.Process(target=home, args=(YearMonthDate, deptCd, arrCd, one_info, 0))
+               p = multiprocessing.Process(target=home, args=(YearMonthDate, deptCd, arrCd, info, 0))
                p.start()
 
         if not len(spy_data):
@@ -172,7 +175,7 @@ def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
 
 if __name__ == '__main__':
     """   DSN-CSX """
-    feiba_main(over_day=10, start_day=0, deptCd="SYX",arrCd="NAY")
+    feiba_main(over_day=10, start_day=0, deptCd="NAY",arrCd="SZX")
 
 
 
