@@ -11,7 +11,7 @@ def do_sql(sql):
             host='127.0.0.1',
             port = 3306,
             user='root',
-            passwd='root',
+            passwd='fuhan',
             db = 'xiecheng',
             )
     cur = conn.cursor()
@@ -69,10 +69,10 @@ def save_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,Flight_Price,i
 
     try:
         ret = do_sql(sql)
-        log_set(name='sql', msg='[save1_fly_xc],%s'%all_uni)
+        log_set(name='sql', msg='[save1_fly_xc],%s'% all_uni)
         return ret
     except Exception as e:
-        log_set(name='sql', msg='save1%s,%s,%s,%s,%s,%s,%s'(str(e.message),str(YearMonthDate1),str(DepartPort),str(ArrivePort),str(Flight_No),str(Flight_Price),str(inVent)))
+        log_set(name='sql', msg='save1 %s,%s,%s,%s,%s,%s,%s'(str(e),str(YearMonthDate1),str(DepartPort),str(ArrivePort),str(Flight_No),str(Flight_Price),str(inVent)))
         update_xcfly(YearMonthDate1,DepartPort,ArrivePort,Flight_Price,Flight_No,inVent,xc_id)
 
 
@@ -147,4 +147,6 @@ if __name__=='__main__':
     inVent='5'
     xc_id='6'
     price='7'
-    save2_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,inVent,xc_id,price)
+    # save2_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,inVent,xc_id,price)
+    a = get2_id_from_info('1015-11-44','Nay','JJJ','7899')
+    print(a,type(a))

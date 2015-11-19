@@ -8,18 +8,19 @@ from datetime import timedelta
 import time
 import socket
 from class_xiecheng import home
-from my_log import  log_set
+from my_log import log_set
 import sys
 import multiprocessing
+from IP_LIST import read_out2
 reload(sys)
 sys.setdefaultencoding('utf-8')
-from IP_LIST import IP_list
-#from fb_xc import feiba_data
+from get_IP import get_ip
+from give_ip import read_out
 
 
 class spider:
-    def __init__(self, tripType = 'OW', adtCount=1, chdCount=0, infCount=0, currency='CNY',sortType='a',
-                 deptCd='', arrCd= '', deptDt='', deptCityCode = '',arrCityCode='',sortExec='a', page=0):
+    def __init__(self, tripType='OW', adtCount=1, chdCount=0, infCount=0, currency='CNY',sortType='a',
+                 deptCd='', arrCd='', deptDt='', deptCityCode='',arrCityCode='',sortExec='a', page=0):
 
         self.deptCd = deptCd
         self.arrCd = arrCd
@@ -32,8 +33,8 @@ class spider:
 
         self.data = 'searchCond={"tripType":"%s","adtCount":%s,"chdCount":%s,"infCount":%s,"currency":"%s","sortType":"%s",\
 "segmentList":[{"deptCd":"%s","arrCd":"%s","deptDt":"%s","deptCityCode":"%s","arrCityCode":"%s"}],' \
-                    '"sortExec":"a","page":"0"}' % (tripType,adtCount,chdCount,infCount,currency,sortType,
-                                                    deptCd,arrCd,deptDt,deptCityCode ,arrCityCode)
+                    '"sortExec":"a","page":"0"}' % (tripType, adtCount, chdCount, infCount, currency, sortType,
+                                                    deptCd,arrCd, deptDt, deptCityCode , arrCityCode)
         self.url_page = ('http://www.flycua.com/flight2014/%s-%s-'+deptDt[2:].replace('-','')+'_CNY.html')%(self.deptCd,self.arrCd)
         self.headers = {'Accept':'application/json, text/javascript, */*; q=0.01',
                     'Accept-Encoding':'gzip, deflate',
@@ -51,12 +52,19 @@ class spider:
 
     def do_work(self):
         # print(self.deptDt)
-        timeout = 10
+        timeout = 3
         socket.setdefaulttimeout(timeout)
         randoms = random.uniform(0, 1)
         url = self.url + '%.17f' % randoms
         ############# proxies##########
         #prox_list = [{'http': 'http://test:hktest@103.27.125.250:6666'}]
+        content = read_out(0)
+        content3 = read_out2()
+        ip2 = '['+content.rstrip(',')  +']'
+        IP_list0 = json.loads(ip2)
+        IP_list3 = json.loads(content3)
+        IP_list = IP_list0 + IP_list3
+        #print(IP_list)
         proxies = random.choice(IP_list)
        # print(proxies)
 
@@ -69,8 +77,8 @@ class spider:
             #print(url)
             # print(self.headers)
             print(proxies)
-            time.sleep(5)
-            r = requests.post(url=url, data=self.data, headers=self.headers,proxies=proxies, timeout=10)
+           # time.sleep(3)
+            r = requests.post(url=url, data=self.data, headers=self.headers,proxies=proxies, timeout=3)
             
             cont = r.content
             print(cont)
@@ -79,7 +87,7 @@ class spider:
                 print('yes')
                 return cont
             else:
-                print('sessionId� fail')
+                print('sessionId� fail')
                 # log_set(name='lianhe', msg='[lianhe]sessionId获取失败，参数错误，%s,%s,%s'%(self.url_page, self.deptDt,proxies))
                 return ''
 
@@ -163,6 +171,7 @@ def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
                #print(one_info)
                p = multiprocessing.Process(target=home, args=(YearMonthDate, deptCd, arrCd, info, 0))
                p.start()
+              # home(YearMonthDate, deptCd, arrCd, info, 0)
 
         if not len(spy_data):
             print('已经没有欢乐抢机票了')

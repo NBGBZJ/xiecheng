@@ -30,12 +30,10 @@ class Delete_XieChenData:
     <RequestGUID xmlns="urn:ctrip:api:flight:trade:common:baseType:v1">'''+str(self.uuid)+'''</RequestGUID>
   </MessageHead>
   <MessageBody>
-    <DeleteType>ByCode</DeleteType>
-    <PolicyIDList />'''+str(self.id)+'''<PolicyIDList />
-    <PolicyCodeList>
-      <Code>AAA-1</Code>
-    </PolicyCodeList>
-    <ExternalIDList />
+    <DeleteType>ByID</DeleteType>
+    <PolicyIDList>
+   <ID>'''+str(self.id)+'''</ID>
+    </PolicyIDList>
     <PolicySource>QuickAPI</PolicySource>
   <IsFuzzyMatch>F</IsFuzzyMatch>
   </MessageBody>
@@ -47,7 +45,8 @@ class Delete_XieChenData:
     def get_data(self):
         r = requests.post(url=self.url,data=self.data,headers=self.post_headers) 
         xml =str(r.text)
-        #print(xml)
+        print(xml)
+        print(self.data)
         re_e = r'FailedCount>(\d+)'
         res = re.compile(re_e)
         fail_info =re.findall(res, xml)
@@ -55,10 +54,13 @@ class Delete_XieChenData:
         try:
             if int(fail_info[0]):
                 log_set(name='del_info', msg='[Del_XC_Fail]del is fail ,do it youself,id =%s' % self.id)
+                del2_xcinfo(self.id)
+                del_db_xcinfo(self.id)
                 return False
             else:
                 log_set(name='del_info', msg='[Del_XC_Ok] del_XC is ok!,id =%s'% self.id)
                 del2_xcinfo(self.id)
+                del_db_xcinfo(self.id)
                 print('xiaohui is successs,%s'%self.id)
                 return True
 
@@ -77,5 +79,5 @@ def del_work(xc_id):
     return do_work.get_data()
 
 if __name__ == '__main__':
-    xc_id = '134285814868'
+    xc_id = '137216160910'
     del_work(xc_id)

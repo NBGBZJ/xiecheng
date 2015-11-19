@@ -55,19 +55,6 @@ class DoXC:
         self.post_headers = {'Host':'exchdata.ctrip.com','Content-type':'application/json',
                              }  #'Content-length':"%d" % len(data2)
     def get_data(self):
-        proxies = {"http": "http://58.220.2.132:80",
-                   "https": "http://58.220.2.133:80",
-                   "https": "http://58.220.2.134:80",
-                   "https": "http://58.220.2.135:80",
-                   "https": "http://58.220.2.136:80",
-                   "https": "http://58.220.2.137:80",
-                   "https": "http://58.220.2.138:80",
-                   "https": "http://58.220.2.139:80",
-                   "https": "http://58.220.2.140:80",
-                   "https": "http://58.220.2.141:80"
-                   }
-
-
         try:
             r = requests.post(url=self.url,data=self.data,headers=self.post_headers)
             xml_str = (r.text).lower()
@@ -82,7 +69,7 @@ class DoXC:
         except:
             print('can not online')
 
-def compare(self,feiba_info,day,deptCd,arrCd):
+    def compare(self,feiba_info,day,deptCd,arrCd):
         """
 	    feiba_inf    {'KN5851': ('A', '578.0')}
 		xc[('139.94', 'KN2908'), ('397.09', 'KN2906')
@@ -116,10 +103,10 @@ def compare(self,feiba_info,day,deptCd,arrCd):
                                xx =float(xc[1])-float(old_xc_price)
                                if (not (str(xx) == '0.1')):  # bu shi wo
                                    price = str(float(xc[1])-0.1)
-                                   #print(xc_id,self.yearDate,price,self.DepartPort,self.ArrivePort,fligh_name_feiba[2:])
+                                   print(xc_id,self.yearDate,price,self.DepartPort,self.ArrivePort,fligh_name_feiba[2:])
                                    log_set(name='fix',msg='%s,me%s,will fix price,last time I push:%s,now xcprice:%s,i will push:%s,feibaflight:%s'%(xc[0],xc_id,old_xc_price,xc[1],price,feiba_price))
                                    inVent= feiba_info[fligh_name_feiba.upper()][0].encode('utf-8')
-
+                                   print('will do fix')
                                    fix_work(xc_id,self.yearDate,price,self.DepartPort,self.ArrivePort,fligh_name_feiba[2:],inVent)
                                else:
                                    #print('yanshi ,bugaijia')
@@ -129,9 +116,9 @@ def compare(self,feiba_info,day,deptCd,arrCd):
                                log_set(name='lunxun_xiecheng', msg='woziji bu gai jia,old_price'+ str(old_xc_price)+'NEW PRICE'+str(float(xc[1])))
                                pass #shi wo
                    else:
-                       #print('need delete zhe push order')
+                       print('need delete zhe push order')
                        log_set(name='lunxun_xiecheng', msg = '[delete]need delete zhe push order,%s,%s,xiecheng:%s,feiba:%s'%(xc[2],self.yearDate,xc[1],feiba_price))
-                       #print('delete the pushed order')
+                       print('delete the pushed order')
                        log_set(name='fix',msg='delete the pushed order:%s,%s,%s,%s,%s'%(self.yearDate, self.DepartPort,self.ArrivePort,fligh_name_feiba[2:],xc_id))
                        #print('idddddd',xc_id)
                        del_work(xc_id)
@@ -144,8 +131,8 @@ def compare(self,feiba_info,day,deptCd,arrCd):
         return push_info
 
 
-def home(day, deptCd, arrCd,feiba_info,tag):
-    do_work = DoXC (yearDate=day ,DepartPort=deptCd,ArrivePort=arrCd ,tag=tag)
+def home(day, deptCd, arrCd, feiba_info, tag):
+    do_work = DoXC(yearDate=day ,DepartPort=deptCd,ArrivePort=arrCd ,tag=tag)
     log_set(name='class_xiecheng', msg ='###################################.%s,%s,%s,%s,%s'%(day, deptCd, arrCd,feiba_info,tag))
     info = do_work.compare(feiba_info,day, deptCd,arrCd)
     ## print(info)

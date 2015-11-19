@@ -132,13 +132,14 @@ class Post_XieChenData:
         ret =r'<successcount>(\d)</successcount>'
         ret = re.compile(ret)
         info_list = re.findall(ret, xml_str)
+        log_set(name='send', msg='[send] check xml!.%s,%s '%(str(info_list[0]), xml_str))
         if len(info_list[0]):
             print('投放成功')
 
             ret_id =r'<successlist><id>(\d+)'
             ret_id = re.compile(ret_id)
             id_list = re.findall(ret_id, xml_str)
-            #print(info_list)
+            print(id_list)
 
             xc_id_new = str(id_list[0])
             old_xc_id = get2_id_from_info(self.yearDate, self.DepartPort,self.ArrivePort,self.Flight_No)
@@ -154,6 +155,7 @@ class Post_XieChenData:
         else:
             # print('失败')
             log_set(name='send', msg='[send_fail] %s,%s,%s,%s,%s'%(self.Flight_No,self.inVent,self.DepartPort,self.ArrivePort,self.yearDate))
+
             return False
 
 def XC_send(YearMonthDate1, DepartPort, ArrivePort, Flight_No,Flight_Price,feiba_inVent,feiba_price):
@@ -185,7 +187,7 @@ def XC_send(YearMonthDate1, DepartPort, ArrivePort, Flight_No,Flight_Price,feiba
     if inVent != 100:
         dowork = Post_XieChenData(yearDate=YearMonthDate1,DepartPort=DepartPort,ArrivePort=ArrivePort,
                                   Flight_No=Flight_No ,Flight_Price=Flight_Price,inVent=inVent,feiba_inVent=feiba_inVent,feiba_price=feiba_price)
-        log_set(name='send', msg='[send_fail] %s,%s,%s,%s,%s,%s'%(YearMonthDate1, DepartPort, ArrivePort, Flight_No,Flight_Price,feiba_inVent))
+        # log_set(name='send', msg='[send_fail,yupiao bugou] %s,%s,%s,%s,%s,%s'%(YearMonthDate1, DepartPort, ArrivePort, Flight_No,Flight_Price,feiba_inVent))
 
         return dowork.push_data()
 
@@ -195,7 +197,7 @@ if __name__ == '__main__':
     a = timedelta(days=50)
     #YearMonthDate1 = str(now+a)[:10]
     #('2015-11-30', 'NAY', 'SZX', 'kn5857', '577.9', 5)
-    YearMonthDate = '2015-11-20'
+    YearMonthDate = '2015-11-18'
     DepartPort="DSN"
     ArrivePort="CSX"
     Flight_No='2009'
