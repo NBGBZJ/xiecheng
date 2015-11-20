@@ -11,7 +11,7 @@ def do_sql(sql):
             host='127.0.0.1',
             port = 3306,
             user='root',
-            passwd='fuhan',
+            passwd='root',
             db = 'xiecheng',
             )
     cur = conn.cursor()
@@ -148,5 +148,9 @@ if __name__=='__main__':
     xc_id='6'
     price='7'
     # save2_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,inVent,xc_id,price)
-    a = get2_id_from_info('1015-11-44','Nay','JJJ','7899')
-    print(a,type(a))
+    #a = get2_id_from_info('1015-11-44','Nay','JJJ','7899')
+    #print(a,type(a))
+    sql ='delete from fly_xc'
+    do_sql(sql)
+    sql ='delete from fly_xc2'
+    do_sql(sql)

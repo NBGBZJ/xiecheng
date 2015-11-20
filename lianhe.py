@@ -58,14 +58,14 @@ class spider:
         url = self.url + '%.17f' % randoms
         ############# proxies##########
         #prox_list = [{'http': 'http://test:hktest@103.27.125.250:6666'}]
-        content = read_out(0)
+        #content = read_out(0)
         content3 = read_out2()
-        ip2 = '['+content.rstrip(',')  +']'
-        IP_list0 = json.loads(ip2)
+        #ip2 = '['+content.rstrip(',')  +']'
+        #IP_list0 = json.loads(ip2)
         IP_list3 = json.loads(content3)
-        IP_list = IP_list0 + IP_list3
+        #IP_list = IP_list0 + IP_list3
         #print(IP_list)
-        proxies = random.choice(IP_list)
+        proxies = random.choice(IP_list3)
        # print(proxies)
 
         ###################
