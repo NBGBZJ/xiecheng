@@ -125,12 +125,32 @@ class Post_XieChenData:
                              }  #'Content-length':"%d" % len(data2)
 
     def push_data(self):
-        r = requests.post(url=self.url,data=self.data, headers=self.post_headers)
-        xml_str = (r.text).lower()
-        #print(xml_str)
+        old_xc_id = get2_id_from_info(self.yearDate, self.DepartPort,self.ArrivePort,self.Flight_No)
+        print(old_xc_id)
+        if not old_xc_id :
+            print('will push++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+            r = requests.post(url=self.url,data=self.data, headers=self.post_headers)
+            xml_str = (r.text).lower()
+            ret =r'<successcount>(\d)</successcount>'
+            ret = re.compile(ret)
+            info_list = re.findall(ret, xml_str)
+            if len(info_list[0]):
+                print('投放成功')
+                ret_id =r'<successlist><id>(\d+)'
+                ret_id = re.compile(ret_id)
+                id_list = re.findall(ret_id, xml_str)
+                print(id_list)
+                xc_id_new = str(id_list[0])
+                save_xc_info(self.yearDate, self.DepartPort,self.ArrivePort,self.Flight_No, self.feiba_price,self.feiba_inVent,xc_id=xc_id_new)
+                save2_xc_info(self.yearDate,self.DepartPort,self.ArrivePort, self.Flight_No,self.inVent,xc_id_new,self.Flight_Price)
+                log_set(name='send', msg='[send] ok!,%s,%s,%s,%s,%s,%s'%(self.Flight_No,xc_id_new,self.inVent,self.DepartPort,self.ArrivePort,self.yearDate))
+            else:
+                log_set(name='send', msg='[send] fail!,%s,%s,%s,%s,%s,%s'%(self.Flight_No,xc_id_new,self.inVent,self.DepartPort,self.ArrivePort,self.yearDate))
+ 
+        else:
+            update2_xcfly(self.yearDate,self.DepartPort,self.ArrivePort, self.Flight_No,self.Flight_Price,xc_id_new,self.inVent)
 
-        ret =r'<successcount>(\d)</successcount>'
-        ret = re.compile(ret)
+        """
         info_list = re.findall(ret, xml_str)
         log_set(name='send', msg='[send] check xml!.%s,%s '%(str(info_list[0]), xml_str))
         if len(info_list[0]):
@@ -157,7 +177,7 @@ class Post_XieChenData:
             log_set(name='send', msg='[send_fail] %s,%s,%s,%s,%s'%(self.Flight_No,self.inVent,self.DepartPort,self.ArrivePort,self.yearDate))
 
             return False
-
+          """
 def XC_send(YearMonthDate1, DepartPort, ArrivePort, Flight_No,Flight_Price,feiba_inVent,feiba_price):
     ## print (YearMonthDate1, DepartPort,ArrivePort="CIF", Flight_No=2929,Flight_Price=2898,inVent=12)
     # 修正数据A投5，   大于6投4，  5个投3    大于3小于5投2  ，  2投1

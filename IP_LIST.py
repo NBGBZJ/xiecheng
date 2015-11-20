@@ -208,11 +208,13 @@ def write_in(content):
     f.close()
 
 def read_out2():
-    write_in(json.dumps(I, ensure_ascii=False))
+#    write_in(json.dumps(I, ensure_ascii=False))
     f = open('ip.txt')
     content = f.read()
     f.close()
     return content
+if __name__ =='__main__':
+    write_in(json.dumps(I, ensure_ascii=False))
 
 
 if __name__ == '__main__':
