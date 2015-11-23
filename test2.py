@@ -22,7 +22,7 @@ headers ={'Origin': 'http://www.flycua.com',
 
 #IP_list = [{u'http': u'http://183.12.204.116:8090'}, {u'http': u'http://221.221.220.165:8090'}, {u'http': u'http://118.170.41.246:8888'}, {u'http': u'http://118.170.41.246:8888'}]
 #proxies = random.choice(IP_list)
-proxies = {'http': 'http://lijunqiang316027648:18838733354@107.160.30.131:8888'}
+proxies = {'http': 'http://lijunqiang316027648:18838733354@45.34.20.5:8888'}
 print(url)
 print(proxies)
 

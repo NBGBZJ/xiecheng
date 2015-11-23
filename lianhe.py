@@ -78,7 +78,7 @@ class spider:
             # print(self.headers)
             print(proxies)
            # time.sleep(3)
-            r = requests.post(url=url, data=self.data, headers=self.headers,proxies=proxies, timeout=3)
+            r = requests.post(url=url, data=self.data, headers=self.headers,proxies=proxies, timeout=5)
             
             cont = r.content
             print(cont)
@@ -98,7 +98,7 @@ class spider:
 
 def deal_data(json_date):
     info_list = list()
-    info =dict()
+    #info =dict()
     #print(json_date)
     try:
         json_date = json.loads(json_date, encoding='utf-8')
@@ -106,6 +106,7 @@ def deal_data(json_date):
         allFlight = json_date['airResultDto']['productUnits']
         for i in range(0, len(allFlight)):
                 print(i)
+                info =dict()
                 hlq_str = 'SVTZU'
                 if allFlight[i]['productInfo']['productCode'] == 'HLY':
                     #print('HLYhlYHLy',allFlight[i]['productInfo']['productCode'])
@@ -138,7 +139,7 @@ def deal_data(json_date):
     except:
         return info_list
 
-def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
+def feiba_main(deptCd, arrCd, start_day=1, over_day=11):
     #q = Queue(connection=Redis())
     try:
         start_day = int(start_day)
@@ -184,7 +185,7 @@ def feiba_main(deptCd, arrCd, start_day=0, over_day=10):
 
 if __name__ == '__main__':
     """   DSN-CSX """
-    feiba_main(over_day=10, start_day=0, deptCd="NAY",arrCd="SZX")
+    feiba_main(over_day=8, start_day=1, deptCd="NAY",arrCd="SZX")
 
 
 
