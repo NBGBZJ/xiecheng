@@ -16,6 +16,9 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 from get_IP import get_ip
 from give_ip import read_out
+import threading
+from deal_old import del_old
+
 
 
 class spider:
@@ -77,23 +80,23 @@ class spider:
             #print(url)
             # print(self.headers)
             print(proxies)
-           # time.sleep(3)
-            r = requests.post(url=url, data=self.data, headers=self.headers,proxies=proxies, timeout=5)
+            time.sleep(6)
+            r = requests.post(url=url, data=self.data, headers=self.headers,proxies=proxies,timeout=7)
             
             cont = r.content
-            print(cont)
+            #print(cont)
 
             if len(cont) > 2500:
-                print('yes')
+                log_set(name='lianhe', msg='lianhe]请求成功:%s,%s,%s,%s'%(self.url_page, self.deptDt,proxies,cont))
                 return cont
             else:
                 print('sessionId� fail')
-                # log_set(name='lianhe', msg='[lianhe]sessionId获取失败，参数错误，%s,%s,%s'%(self.url_page, self.deptDt,proxies))
+                log_set(name='lianhe', msg='[lianhe]sessionId获取失败，参数错误，%s,%s,%s'%(self.url_page, self.deptDt,proxies))
                 return ''
 
         except Exception as e:
              print('网络请求问题')
-             log_set(name='lianhe', msg='lianhe]i,cant online:%s,%s,%s'%(self.url_page, self.deptDt,proxies))
+             log_set(name='lianhe', msg='lianhe]网络请求问题:%s,%s,%s'%(self.url_page, self.deptDt,proxies))
              return ''
 
 def deal_data(json_date):
@@ -127,7 +130,7 @@ def deal_data(json_date):
                             hly = (allFlight[i]['fareInfoView'][t]['fare']['fdPrice'])
                             if float(hly) >8:
                                 info[hangban] = (yupiao, hly)
-                                print('OKOOOKOKinfo',info)
+                                #print('OKOOOKOKinfo',info)
                                 info_list.append(info)
 
 
@@ -138,6 +141,16 @@ def deal_data(json_date):
         return info_list
     except:
         return info_list
+
+class myThread(threading.Thread):
+    def __init__(self, YearMonthDate, deptCd, arrCd, info):
+        threading.Thread.__init__(self)
+        self.ym = YearMonthDate
+        self.deptCd = deptCd
+        self.arrCd = arrCd
+        self.info = info
+    def run(self):
+         home(self.ym,self.deptCd, self.arrCd, self.info, 0)
 
 def feiba_main(deptCd, arrCd, start_day=1, over_day=11):
     #q = Queue(connection=Redis())
@@ -158,9 +171,9 @@ def feiba_main(deptCd, arrCd, start_day=1, over_day=11):
         if len(spy_data)>2000:
             """有取到有效信息"""
             info_list = deal_data(spy_data)
-            print('all hyl is',(info_list))
-            ## log_set(name='lianhe', msg='[lianhe]all hyl is'+str(info_list))
-
+            print('all hyl is',info_list)
+            log_set(name='lianhe', msg='[lianhe]all hyl is'+str(info_list))
+            del_old(YearMonthDate, deptCd, arrCd,info_list)
             for info in info_list:
                #one_info=dict()
              #  print(YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1])
@@ -168,15 +181,14 @@ def feiba_main(deptCd, arrCd, start_day=1, over_day=11):
                print('#############去做对比工作和投放#############')
                #one_info[info] = info_list[info]
                #log_set(name='duibi', msg='[lianhe]'+YearMonthDate+'//飞机航班号：'+ info+'//'+'剩余票数：'+ (info_list[info][0]) + '//欢乐抢单程单价:'+info_list[info][1]+deptCd+arrCd)
-               print('YYYYYYYYYYYYYYY')
-               #print(one_info)
-               p = multiprocessing.Process(target=home, args=(YearMonthDate, deptCd, arrCd, info, 0))
-               p.start()
+               t = myThread(YearMonthDate, deptCd, arrCd, info)
+               #p = multiprocessing.Process(target=home, args=(YearMonthDate, deptCd, arrCd, info, 0))
+               t.start()
               # home(YearMonthDate, deptCd, arrCd, info, 0)
 
         if not len(spy_data):
             print('已经没有欢乐抢机票了')
-            log_set(name='lianhe', msg='[lianhe]it have not invent')
+            #log_set(name='lianhe', msg='[lianhe]it have not invent')
             #return {'code':1}
             #TO 下次再爬，单独爬某一天方法##############
 
@@ -185,7 +197,7 @@ def feiba_main(deptCd, arrCd, start_day=1, over_day=11):
 
 if __name__ == '__main__':
     """   DSN-CSX """
-    feiba_main(over_day=8, start_day=1, deptCd="NAY",arrCd="SZX")
+    feiba_main(over_day=7, start_day=4, deptCd="NAY",arrCd="SZX")
 
 
 

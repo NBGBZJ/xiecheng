@@ -10,5 +10,5 @@ while 1:
     #get_all_ip()
     #time.sleep(6)
     work()
-    time.sleep(60)
+    #time.sleep(60)
 

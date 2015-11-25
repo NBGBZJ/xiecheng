@@ -8,7 +8,7 @@ url = 'http://www.flycua.com/otabooking/flight-search!doFlightSearch.shtml?rand=
 #url = 'http://ip.chinaz.com/'
 randoms = random.uniform(0, 1)
 url = url + '%.17f' % randoms
-data = 'searchCond={"tripType":"OW","adtCount":1,"chdCount":0,"infCount":0,"currency":"CNY","sortType":"a","segmentList":[{"deptCd":"SYX","arrCd":"NAY","deptDt":"2015-11-19","deptCityCode":"","arrCityCode":""}],"sortExec":"a","page":"0"}'
+data = 'searchCond={"tripType":"OW","adtCount":1,"chdCount":0,"infCount":0,"currency":"CNY","sortType":"a","segmentList":[{"deptCd":"SZX","arrCd":"NAY","deptDt":"2015-12-05","deptCityCode":"","arrCityCode":""}],"sortExec":"a","page":"0"}'
 headers ={'Origin': 'http://www.flycua.com',
           'Connection': 'keep-alive',
           'Accept-Language': 'zh-CN,zh;q=0.8',
@@ -22,7 +22,7 @@ headers ={'Origin': 'http://www.flycua.com',
 
 #IP_list = [{u'http': u'http://183.12.204.116:8090'}, {u'http': u'http://221.221.220.165:8090'}, {u'http': u'http://118.170.41.246:8888'}, {u'http': u'http://118.170.41.246:8888'}]
 #proxies = random.choice(IP_list)
-proxies = {'http': 'http://lijunqiang316027648:18838733354@45.34.20.5:8888'}
+proxies = {'http': 'http://lijunqiang316027648:18838733354@104.217.235.133:8888'}
 print(url)
 print(proxies)
 

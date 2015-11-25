@@ -194,7 +194,7 @@ def XC_send(YearMonthDate1, DepartPort, ArrivePort, Flight_No,Flight_Price,feiba
         if feiba_inVent in (1,'1'):
             inVent =100
         if feiba_inVent in (2,'2'):
-            inVent =1
+            inVent =100
         if feiba_inVent in (3,4,'3','4'):
             inVent = 2
         if feiba_inVent in ('5',5):
@@ -220,7 +220,7 @@ if __name__ == '__main__':
     YearMonthDate = '2015-11-18'
     DepartPort="DSN"
     ArrivePort="CSX"
-    Flight_No='2009'
+    Flight_No='5911'
     Flight_Price='11111'
     feiba_price ='4444'
     inVent= 2

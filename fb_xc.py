@@ -3,34 +3,7 @@ from class_xiecheng_lunxun import home
 from my_log import log_set
 import time
 import copy
-import multiprocessing  
-"""
-YearMonthDate1 ='2015-11-08'
-DepartPort = 'DSN'
-ArrivePort ='CSX'
-Flight_No = 'kn2809'
-
-Flight_Price = '10000'
-inVent='4'
-xc_id = '133583761429'
-print('a')
-update_xcfly(YearMonthDate1,DepartPort, ArrivePort, Flight_Price,Flight_No,inVent,xc_id)
-#save_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,Flight_Price,inVent,xc_id)
-#save2_xc_info(YearMonthDate1,DepartPort,ArrivePort,Flight_No,inVent,xc_id)
-#a=get2_id_from_info('2015-12-09', 'NAY', 'CIF', '2929')
-#xc_id = get2_id_from_info(yearDate, self.DepartPort,self.ArrivePort,fligh_name_feiba[2:])
-
-#save_xc_info(YearMonthDate1, DepartPort,ArrivePort, Flight_No,Flight_Price,inVent,xc_id)
-#xc_list = query_xcinfo()
-#print(type(xc_list))
-#print(a)
-#del2_xcinfo(a)
-
-#update2_xcfly(YearMonthDate1, DepartPort,ArrivePort, Flight_No,Flight_Price,xc_id)
-#xc_list = query_xcinfo()
-#print(xc_list)
-
-"""
+from multiprocessing import Pool
 
 def fenduan(a):
     l = list()
@@ -63,20 +36,22 @@ def lunxun():
         print('lunxun'+str(xc_list))
         t = len(xc_list)
         print(t)
-       # a =input()
+
         if t :
             xc_list2 = copy.deepcopy(xc_list)
             print(len(xc_list2))
             l = fenduan(xc_list2)
+            pool = Pool(processes=len(l))
             for i in range(len(l)):
                 print(len(l))
                 print(l[i])
                 #a=input()
-                p = multiprocessing.Process(target=home2, args =(l[i],))
-           #p = multiprocessing.Process(target=home2, args =(t,))
-                p.start()
-                print('#######################')                        #p = multiprocessing.Process(target=home, args=(i[0], i[1], i[2], fb_info,1))
+                result = pool.apply_async(home2,(l[i],))
+            pool.close()
+            pool.join()
         else:
+            time.sleep(5)
             lunxun()
+            
 if __name__ == '__main__':
     lunxun()

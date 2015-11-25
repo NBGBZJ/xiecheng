@@ -37,7 +37,11 @@ def query_xcinfo():
     ret = do_sql(sql)
 
     return ret
-
+def sel_old(day,depart,arr):
+    sql = "select Flight_No from fly_xc where YearMonthDate1= '%s' and DepartPort='%s' and ArrivePort='%s'"%(day,depart,arr)
+    print(sql)
+    ret = do_sql(sql)
+    return ret
 
 def del_db_xcinfo(id):
     sql = " DELETE FROM fly_xc where xc_id ='%s'"%id
